@@ -4,10 +4,11 @@
 
 var personalPizza;
 var total = 0;
+var size;
 var portion;
 var veggies = [];                          // Initializes variables to later be accessed or passed into function parameters
-var meats [];
-var fruits [];
+var meats = [];
+var fruits = [];
 var toppings = [veggies,meats,fruits];
 
 /*///--------------------------------------/////
@@ -22,7 +23,7 @@ function Pizza(size,veggies,meats,fruits){
 }
 
 /*///--------------------------------------/////
-////   Pizza Prototype methods
+//// Pizza Proto methods / Business Logic
 ////---------------------------------------//*/
 
 Pizza.prototype.portionCost = function(){
@@ -50,15 +51,21 @@ Pizza.prototype.fruitCost = function(fruit){
   });
 }
 
+/*///--------------------------------------/////
+////   Event Listeners / Interface Logic
+////---------------------------------------//*/
+
 $(document).ready(function(){
-  $("SUBMIT").click(function(){
-    size.push($("SIZE").val());
-    console.log()
-    veggies.push($("VEGGIE").val());        // Will push values to my global variables and arrays to later be passed in to my methods
-    console.log(veggies);
-    meats.push($("MEAT").val());
+  $("#order-pizza").click(function(event){
+    event.preventDefault();
+    size = $('input[name="size"]:checked').val();
+    console.log(size);
+    meats.push($('input[name="meat"]:checked').val());
     console.log(meats);
-    fruits$("FRUIT").val();
+    veggies.push($('input[name="veggie"]:checked').val());
+    console.log(veggies);        // Will push values to my global variables and arrays to later be passed in to my methods
+    fruits.push($('input[name="fruit"]:checked').val());
     console.log(fruits);
+
   });
 });
