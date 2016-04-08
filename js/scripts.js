@@ -49,3 +49,16 @@ Pizza.prototype.fruitCost = function(fruit){
     return total += .75;
   });
 }
+
+$(document).ready(function(){
+  $("SUBMIT").click(function(){
+    size.push($("SIZE").val());
+    console.log()
+    veggies.push($("VEGGIE").val());        // Will push values to my global variables and arrays to later be passed in to my methods
+    console.log(veggies);
+    meats.push($("MEAT").val());
+    console.log(meats);
+    fruits$("FRUIT").val();
+    console.log(fruits);
+  });
+});
