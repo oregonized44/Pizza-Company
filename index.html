@@ -13,144 +13,145 @@
       <div class="row">
         <div class="col-xs-6">
           <h1>Contact info</h2>
-          <form id="order-specifics">
-            <div class="form-group">
-              <label for="buyer">Full Name</label>
-              <input type="text" class="form-control" id="buyer">
-              <label for="buyer-address">Address</label>
-              <input type="text" class="form-control" id="buyer">
-            </div>
-          </form>
-        </div>
-        <div class="col-xs-6">
-          <h1>Pizza Options</h2>
-          <form id="pizza-specifics">
-            <legend>Size</legend>
-            <div class="form-group" id="pizza-size-section">
-             <div class="radio">
-               <label>
-                 <input type="radio" name="size" value="small">
-                 Small
-               </label>
+            <form id="order-specifics">
+              <div class="form-group">
+                <label for="buyer">Full Name</label>
+                <input type="text" class="form-control" id="buyer">
+                <label for="buyer-address">Address</label>
+                <input type="text" class="form-control" id="buyer">
+              </div>
+            </form>
+            <button id="#submit-order">Submit Order</button>
+          </div>
+          <div class="col-xs-6">
+            <h1>Pizza Options</h2>
+            <form id="pizza-specifics">
+              <legend>Size<span>(choose one)</span></legend>
+              <div class="form-group" id="pizza-size-section">
+               <div class="radio">
+                 <label>
+                   <input type="radio" name="size" value="small">
+                   Small
+                 </label>
+               </div>
+               <div class="radio">
+                 <label>
+                   <input type="radio" name="size" value="medium">
+                   Medium
+                 </label>
+               </div>
+               <div class="radio">
+                 <label>
+                   <input type="radio" name="size" value="large">
+                   Large
+                 </label>
+               </div>
              </div>
-             <div class="radio">
-               <label>
-                 <input type="radio" name="size" value="medium">
-                 Medium
-               </label>
+             <legend>Meats<span>(choose one)</span></legend>
+             <div class="form-group" id="meats-section">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="meat" value="sausage">
+                  Sausage
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="meat" value="pepperoni">
+                  Pepperoni
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="meat" value="canadian bacon">
+                  Canadian Bacon
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="meat" value="bacon">
+                  Bacon
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="meat" value="salami">
+                  Salami
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="meat" value="chicken">
+                  Chicken
+                </label>
+              </div>
              </div>
-             <div class="radio">
-               <label>
-                 <input type="radio" name="size" value="large">
-                 Large
-               </label>
-             </div>
-           </div>
-           <legend>Meats</legend>
-           <div class="form-group" id="meats-section">
-            <div class="radio">
-              <label>
-                <input type="radio" name="meat" value="sausage">
-                Sausage
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="meat" value="pepperoni">
-                Pepperoni
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="meat" value="canadian bacon">
-                Canadian Bacon
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="meat" value="bacon">
-                Bacon
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="meat" value="salami">
-                Salami
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="meat" value="chicken">
-                Chicken
-              </label>
-            </div>
-           </div>
-           <legend>Veggies</legend>
-           <div class="form-group" id="fruits-section">
-            <div class="radio">
-              <label>
-                <input type="radio" name="veggie" value="spinach">
-                Spinach
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="veggie" value="green bell peppers">
-                Green Bell Peppers
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="veggie" value="red onion">
-                Red Onion
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="veggie" value="olives">
-                Olives
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="veggie" value="mushrooms">
-                Mushrooms
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="veggie" value="artichoke hearts">
-                Artichoke Hearts
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="veggie" value="red bell peppers">
-                Red Bell Peppers
-              </label>
-            </div>
+             <legend>Veggies<span>(choose one)</span></legend>
+             <div class="form-group" id="fruits-section">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="veggie" value="spinach">
+                  Spinach
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="veggie" value="green bell peppers">
+                  Green Bell Peppers
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="veggie" value="red onion">
+                  Red Onion
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="veggie" value="olives">
+                  Olives
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="veggie" value="mushrooms">
+                  Mushrooms
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="veggie" value="artichoke hearts">
+                  Artichoke Hearts
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="veggie" value="red bell peppers">
+                  Red Bell Peppers
+                </label>
+              </div>
 
-           <legend>Fruits</legend>
-           <div class="radio">
-             <label>
-               <input type="radio" name="fruit" value="tomatoes">
-               Tomatoes
-             </label>
-           </div>
-           <div class="radio">
-             <label>
-               <input type="radio" name="fruit" value="pineapple">
-               Pineapple
-             </label>
-           </div>
-           <div class="radio">
-             <label>
-               <input type="radio" name="fruit" value="mandarin oranges">
-               Mandarin Oranges
-             </label>
-           </div>
-           <legend></legend>
-           <button class="btn btn-error" id="order-pizza">Complete Your Order</button>
+             <legend>Fruits<span>(optional)</span></legend>
+             <div class="radio">
+               <label>
+                 <input type="radio" name="fruit" value="tomatoes">
+                 Tomatoes
+               </label>
+             </div>
+             <div class="radio">
+               <label>
+                 <input type="radio" name="fruit" value="pineapple">
+                 Pineapple
+               </label>
+             </div>
+             <div class="radio">
+               <label>
+                 <input type="radio" name="fruit" value="mandarin oranges">
+                 Mandarin Oranges
+               </label>
+             </div>
+             <legend></legend>
+           <button class="btn btn-success" id="order-pizza">Complete Your Order</button>
           </form>
         </div>
       </div>

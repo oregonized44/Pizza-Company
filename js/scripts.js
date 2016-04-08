@@ -66,6 +66,25 @@ $(document).ready(function(){
     console.log(veggies);        // Will push values to my global variables and arrays to later be passed in to my methods
     fruits.push($('input[name="fruit"]:checked').val());
     console.log(fruits);
+    var personalPizza = new Pizza(size,veggies,meats,fruits);
+    personalPizza.portionCost();
+    personalPizza.veggieCost();
+    personalPizza.meatCost();
+    personalPizza.fruitCost();
+    console.log(personalPizza);
+    $("#order-specifics").hide();
+    $("#pizza-specifics").hide();
+    console.log(total);
 
+  });
+  $("button#submit-order").click(function(event){
+    event.preventDefault();
+    alert("clicked");
+    var personalPizza = new Pizza(size,veggies,meats,fruits);
+    personalPizza.portionCost();
+    personalPizza.veggieCost();
+    personalPizza.meatCost();
+    personalPizza.fruitCost();
+    console.log(total);
   });
 });
