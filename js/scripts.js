@@ -1,7 +1,6 @@
 /*///--------------------------------------/////
 ////   Initializing global variables
 ////---------------------------------------//*/
-
 var personalPizza;
 var total = 0;
 var size;
@@ -10,24 +9,20 @@ var veggies = [];                          // Initializes variables to later be 
 var meats = [];
 var fruits = [];
 var toppings = [veggies,meats,fruits];
-var name;
+var customer;
 var address;
-
 /*///--------------------------------------/////
 ////   Pizza Constructor
 ////---------------------------------------//*/
-
 function Pizza(size,veggies,meats,fruits){
   this.size = size;
   this.veggies = veggies;                  // Will create our pizza with our passed in global variables for parameters
   this.meats = meats;
   this.fruits = fruits;
 }
-
 /*///--------------------------------------/////
 //// Pizza Proto methods / Business Logic
 ////---------------------------------------//*/
-
 Pizza.prototype.portionCost = function(){
   if(this.size === "small"){
     return total += 10.00;                  // Method adding pizza size cost
@@ -52,11 +47,9 @@ Pizza.prototype.fruitCost = function(fruit){
     return total += .75;
   });
 }
-
 /*///--------------------------------------/////
 ////   Event Listeners / Interface Logic
 ////---------------------------------------//*/
-
 $(document).ready(function(){
   $("#order-pizza").click(function(event){
     event.preventDefault();
@@ -68,7 +61,7 @@ $(document).ready(function(){
     console.log(personalPizza);
     personalPizza.portionCost();
     personalPizza.veggieCost();
-    personalPizza.meatCost();
+    personalPizza.meatCost();                                   // Will gather my meat, veg, size, and fruit cost
     personalPizza.fruitCost();
     console.log(total);
     $("#order-specifics").hide();
@@ -77,7 +70,5 @@ $(document).ready(function(){
     $("#pizza-options-title").hide();
     $("#amount").text("$" + total);
     $("h3").show();
-
   });
-
 });
