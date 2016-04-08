@@ -10,6 +10,8 @@ var veggies = [];                          // Initializes variables to later be 
 var meats = [];
 var fruits = [];
 var toppings = [veggies,meats,fruits];
+var name;
+var address;
 
 /*///--------------------------------------/////
 ////   Pizza Constructor
@@ -59,32 +61,23 @@ $(document).ready(function(){
   $("#order-pizza").click(function(event){
     event.preventDefault();
     size = $('input[name="size"]:checked').val();
-    console.log(size);
     meats.push($('input[name="meat"]:checked').val());
-    console.log(meats);
-    veggies.push($('input[name="veggie"]:checked').val());
-    console.log(veggies);        // Will push values to my global variables and arrays to later be passed in to my methods
+    veggies.push($('input[name="veggie"]:checked').val());     // Will push values to my global variables and arrays to later be passed in to my methods
     fruits.push($('input[name="fruit"]:checked').val());
-    console.log(fruits);
     var personalPizza = new Pizza(size,veggies,meats,fruits);
+    console.log(personalPizza);
     personalPizza.portionCost();
     personalPizza.veggieCost();
     personalPizza.meatCost();
     personalPizza.fruitCost();
-    console.log(personalPizza);
+    console.log(total);
     $("#order-specifics").hide();
     $("#pizza-specifics").hide();
-    console.log(total);
+    $("h1").hide();
+    $("#pizza-options-title").hide();
+    $("#amount").text("$" + total);
+    $("h3").show();
 
   });
-  $("button#submit-order").click(function(event){
-    event.preventDefault();
-    alert("clicked");
-    var personalPizza = new Pizza(size,veggies,meats,fruits);
-    personalPizza.portionCost();
-    personalPizza.veggieCost();
-    personalPizza.meatCost();
-    personalPizza.fruitCost();
-    console.log(total);
-  });
+
 });
